@@ -2,7 +2,19 @@
  * author : rits1272
  */
 
-#include<bits/stdc++.h>
+#include <cinttypes>
+#include <cstdlib>
+#include<iostream>
+#include <unordered_map>
+#include<vector>
+#include<map>
+#include<stack>
+#include<queue>
+#include<set>
+#include<algorithm>
+#include<cassert>
+#include<stdlib.h>
+#include<string>
 using namespace std;
 
 #define int long long
@@ -22,11 +34,20 @@ void test_case(){
 }
 
 int32_t main(){
-	ios_base::sync_with_stdio(false);cin.tie(NULL); 
+	ios_base::sync_with_stdio(false);cin.tie(NULL);
+	#ifdef ONLINEJUDGE
+       clock_t tStart = clock();
+       freopen("in.txt","r",stdin);
+       freopen("out.txt","w",stdout);
+ 	#endif
 	int tt = 1; 
 	cin >> tt;
 	while(tt--){
 	    test_case();
 	}
+	#ifdef ONLINEJUDGE
+     fprintf(stderr, "\n>> Runtime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC); // this line gives your code runtime
+  	#endif
 	return 0; 
 }
+
